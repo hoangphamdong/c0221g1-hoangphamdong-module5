@@ -1,0 +1,17 @@
+<h1 class="text-danger">Calculator</h1>
+<div>
+  <input type="number" [value]="fistOperand" (change)="updateFirstOperand($event.target)">
+<select [value]="operator" (change)="updateOperator($event.target)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+  <input class="text-dark"  type="number" [value]="secondOperand"(change)="updateSecondOperand($event.target)">
+</div>
+<div>
+  <button (click)="calculate()">Tính</button>
+</div>
+<div>
+  {{result}}
+</div>

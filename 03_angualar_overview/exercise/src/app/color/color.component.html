@@ -1,7 +1,10 @@
 <h3>Change Color</h3>
 <div>
-  <select (change)="changeColor($event.target.value)">
-    <option *ngFor="let i of color" value="{{i}}">{{i}}</option>
+  <select (change)="changeColor($event.target)">
+    <option [value]="color1">{{color1}}/option>
+    <option [value]="color2">{{color2}}</option>
+    <option [value]="color3">{{color3}}</option>
+    <option [value]="color4">{{color4}}</option>
   </select>
 </div>
 <p class="output" [style.color]="tempColor">
