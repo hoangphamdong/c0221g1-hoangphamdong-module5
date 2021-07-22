@@ -1,0 +1,17 @@
+<h1>Awesome Calculator</h1>
+<div>
+  <input type="number" [value]="firstOperand" (change)="updateFirstOperand($event.target.value)">
+  <select [value]="operator" (change)="updateOperator($event.target.value)">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" [value]="secondOperand" (change)="updateSecondOperand($event.target.value)">
+</div>
+<div>
+  <button (click)="calculate()">Thực thi</button>
+</div>
+<div>
+  {{result}}
+</div>
