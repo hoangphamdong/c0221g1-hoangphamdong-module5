@@ -10,7 +10,8 @@ export class CountdownTimerComponent implements OnInit {
   message = '';
   remainingTime: number;
   @Input()
-  seconds = 11;
+  // seconds = 11;
+  seconds :any;
   @Output()
   finish = new EventEmitter<boolean>();
   private intervalId = 0;
