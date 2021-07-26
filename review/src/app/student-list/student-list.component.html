@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container-lg">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-8"><h2>Employee <b>Details</b></h2></div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
+          </div>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>DateOfBirth</th>
+          <th>Point</th>
+          <th>Actions</th>
+        </tr>
+        <tbody *ngFor="let student of student">
+        <tr>
+          <td>{{student.id}}</td>
+          <td (click)="detailStudent(student)">{{student.name}}</td>
+          <td>{{student.dateOfBirth}}</td>
+          <td>
+            <span *ngIf="student.point<8">khá</span>
+            <span *ngIf="student.point>8">giỏi</span>
+          </td>
+          <td>
+            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-student-create (submitCreateStudent)="createStudent($event)"></app-student-create>
+<app-detail [student]="student"></app-detail>
+

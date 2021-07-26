@@ -1,0 +1,16 @@
+<div class="ml-3" style="width: 400px">
+  <form>
+    <h4 class="modal-title">Add student</h4>
+    <label>id</label>
+    <input type="text" [(ngModel)]="student.id" class="form-control" required>
+    <label>Name</label>
+    <input type="email" [(ngModel)]="student.name" class="form-control" required>
+    <label>DateOfBirth</label>
+    <input class="form-control" [(ngModel)]="student.dateOfBirth" required>
+    <label>Point</label>
+    <input type="text" [(ngModel)]="student.point" class="form-control" required>
+    <br>
+    <button (click)="createStudent()" class="btn btn-success">add</button>
+  </form>
+</div>
+

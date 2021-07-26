@@ -1,0 +1,4 @@
+<p>{{student.id}}</p>
+<p>{{student.name}}</p>
+<input type="text" [value]="student.name" (change)="changeNameStudent($event.target)">
+<input type="text" [(ngModel)]="student.name">
