@@ -9,6 +9,7 @@ import { StudentListComponent } from './student-list/student-list.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { StudentCreateComponent } from './student-create/student-create.component';
 import { DetailComponent } from './detail/detail.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DetailComponent } from './detail/detail.component';
     StudentInfoComponent,
     StudentListComponent,
     StudentCreateComponent,
-    DetailComponent
+    DetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

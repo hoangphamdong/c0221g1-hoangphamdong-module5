@@ -3,22 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudentComponent } from './crud/student/student.component';
-import { CreateComponent } from './crud/create/create.component';
-import { DetailComponent } from './crud/detail/detail.component';
-import {FormsModule} from '@angular/forms';
+import { FormLoginComponent } from './form-login/form-login.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentComponent,
-    CreateComponent,
-    DetailComponent
+    FormLoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,63 @@
+<div style="width: 500px; margin: 100px 400px">
+  <form [formGroup]="signUp" (ngSubmit)="onSubmit()" style="border:1px solid #ccc">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <hr>
+      <label><b>Email</b></label>
+      <input formControlName="email" type="text" placeholder="Enter Email">
+      <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+        <div [hidden]="!email.errors.required">
+          <p style="color: red">not null</p>
+        </div>
+        <div [hidden]="!email.errors.pattern">
+          <p style="color: red">error gmail vd:abc@gmail.com</p>
+        </div>
+      </div>
+
+      <label><b>Password</b></label>
+      <input formControlName="password" id="password" type="password" placeholder="Enter Password">
+      <div *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+        <div [hidden]="!password.errors.required">
+          <p style="color: red">not null</p>
+        </div>
+        <div [hidden]="!password.errors.minlength">
+          <p style="color: red">length password >=6</p>
+        </div>
+      </div>
+
+      <label><b>Confirm Password</b></label>
+      <input formControlName="confirmPassword" type="password" placeholder="Repeat Password">
+
+      <label><b>Country</b></label>
+      <select formControlName="country">
+        <option [ngValue]="c.name" *ngFor="let c of countryList">
+          {{c.name}}
+        </option>
+      </select>
+      <div *ngIf="!country?.valid && (country?.dirty || country?.touched)">
+        <div [hidden]="!country.errors.required">
+          <p style="color: red">not null</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <label><b>Age</b></label>
+      <input formControlName="age" id="age" type="date">
+
+      <label>
+        <label><b>Gender</b></label>
+        <input type="radio" value="Nam" formControlName="gender" style="margin-bottom:15px"> Nam
+        <input type="radio" value="Nữ" formControlName="gender" style="margin-bottom:15px"> Nữ
+      </label>
+
+      <br>
+      <label><b>Phone</b></label>
+      <input formControlName="phone" type="text" placeholder="Enter Phone">
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+
+  </form>
+</div>
