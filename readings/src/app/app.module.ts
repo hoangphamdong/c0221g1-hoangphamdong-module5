@@ -9,7 +9,8 @@ import { ItemDetailComponentComponent } from './item-detail-component/item-detai
 import { ParentComponentComponent } from './parent-component/parent-component.component';
 import { ItemOutputComponentComponent } from './item-output-component/item-output-component.component';
 import { AppComponentComponent } from './app-component/app-component.component';
-
+import { MyserviceService } from './myservice.service';
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { AppComponentComponent } from './app-component/app-component.component';
     ParentComponentComponent,
     ItemOutputComponentComponent,
     AppComponentComponent,
+    NewCmpComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,7 @@ import { StudentComponent } from './crud/student/student.component';
 import { CreateComponent } from './crud/create/create.component';
 import { DetailComponent } from './crud/detail/detail.component';
 import {FormsModule} from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxPaginationModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
