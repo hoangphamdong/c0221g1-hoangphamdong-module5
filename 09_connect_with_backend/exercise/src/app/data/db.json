@@ -1,0 +1,72 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "Đồ uống"
+    },
+    {
+      "id": 2,
+      "name": "Hàng tiêu dùng"
+    },
+    {
+      "id": 3,
+      "name": "Thực phẩm"
+    },
+    {
+      "id": 4,
+      "name": "Đồ điện tử"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "IPhone 12",
+      "price": 2400000,
+      "description": "New",
+      "category": {
+        "id": 4,
+        "name": "Đồ điện tử"
+      }
+    },
+    {
+      "id": 2,
+      "name": "IPhone 11",
+      "price": 1560000,
+      "description": "Like new",
+      "category": {
+        "id": 4,
+        "name": "Đồ điện tử"
+      }
+    },
+    {
+      "id": 3,
+      "name": "IPhone X",
+      "price": 968000,
+      "description": "97%",
+      "category": {
+        "id": 4,
+        "name": "Đồ điện tử"
+      }
+    },
+    {
+      "id": 4,
+      "name": "IPhone 8",
+      "price": 7540000,
+      "description": "98%",
+      "category": {
+        "id": 4,
+        "name": "Đồ điện tử"
+      }
+    },
+    {
+      "id": 5,
+      "name": "IPhone 11 Pro",
+      "price": 1895000,
+      "description": "Like new",
+      "category": {
+        "id": 4,
+        "name": "Đồ điện tử"
+      }
+    }
+  ]
+}
