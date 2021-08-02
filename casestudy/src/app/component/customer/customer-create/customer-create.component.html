@@ -1,0 +1,93 @@
+<div class="card bg-light">
+  <article class="card-body mx-auto" style="width: 500px;">
+    <h4 class="card-title mt-3 text-center">Create New Customer</h4>
+    <form [formGroup]="customerForm" (ngSubmit)="submit()">
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+        </div>
+        <select formControlName="customerType" class="form-control">
+          <option selected [value]="null" disabled>Customer Type</option>
+          <option *ngFor="let customerType of customerTypes"
+                  [value]="customerType.customerTypeId">{{customerType.customerTypeName}}</option>
+        </select>
+      </div>
+
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+        </div>
+        <input formControlName="customerCode" class="form-control" placeholder="Customer code" type="text">
+      </div>
+      <div style="color:red;" *ngFor="let validate of validate_message.customerCode">
+        <div *ngIf="customerForm.get('customerCode')?.hasError(validate.type) && customerForm.get('customerCode')?.touched">{{validate.message}}</div>
+      </div>
+
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+        </div>
+        <input formControlName="customerName" class="form-control" placeholder="Customer name" type="text">
+      </div>
+      <div style="color:red;" *ngFor="let validate of validate_message.customerName">
+        <div *ngIf="customerForm.get('customerName')?.hasError(validate.type) && customerForm.get('customerName')?.touched">{{validate.message}}</div>
+      </div>
+
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+        </div>
+        <input formControlName="customerDayOfBirth" class="form-control" placeholder="DayOfBirth" type="date">
+      </div>
+      <div style="color:red;" *ngFor="let validate of validate_message.customerDayOfBirth">
+        <div *ngIf="customerForm.get('customerDateOfBirth')?.hasError(validate.type) && customerForm.get('customerDateOfBirth')?.touched">{{validate.message}}</div>
+      </div>
+
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+        </div>
+        <input formControlName="customerIdCard" class="form-control" placeholder="Id Card" type="text">
+      </div>
+      <div style="color:red;" *ngFor="let validate of validate_message.customerIdCard">
+        <div *ngIf="customerForm.get('customerIdCard')?.hasError(validate.type) && customerForm.get('customerIdCard')?.touched">{{validate.message}}</div>
+      </div>
+
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <input formControlName="customerPhone" class="form-control" placeholder="Phone number" type="text">
+      </div>
+      <div style="color:red;" *ngFor="let validate of validate_message.customerPhone">
+        <div *ngIf="customerForm.get('customerPhone')?.hasError(validate.type) && customerForm.get('customerPhone')?.touched">{{validate.message}}</div>
+      </div>
+
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+        </div>
+        <input formControlName="customerEmail" class="form-control" placeholder="Email address" type="email">
+      </div>
+      <div style="color:red;" *ngFor="let validate of validate_message.customerEmail">
+        <div *ngIf="customerForm.get('customerEmail')?.hasError(validate.type) && customerForm.get('customerEmail')?.touched">{{validate.message}}</div>
+      </div>
+
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input formControlName="customerAddress" class="form-control" placeholder="Address" type="text">
+      </div>
+      <div style="color:red;" *ngFor="let validate of validate_message.customerAddress">
+        <div *ngIf="customerForm.get('customerAddress')?.hasError(validate.type) && customerForm.get('customerAddress')?.touched">{{validate.message}}</div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" [disabled]="customerForm.invalid" class="btn btn-primary btn-block"> Create Customer</button>
+      </div>
+
+    </form>
+  </article>
+</div>
+

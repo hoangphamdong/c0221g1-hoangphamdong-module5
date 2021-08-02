@@ -1,1 +1,39 @@
-<app-customer-list></app-customer-list>
+<div class="container-fluid px-0 " style="height: 100vh">
+  <nav class="rounded  text-white navbar navbar-expand-sm  " style="height: 10% ; background-color: gainsboro ; color: rgb(0,0,0)">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#"><img style="height: 50px;width: 50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLXdQ6LVul9akt73hNcIGaI8pMHahAG-tDfGBGpxiwdj1hlPMwEunBYcuCvivO7Ub5wSA&usqp=CAU"></a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" >Trang chủ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Liên Hệ</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Tuyển dụng
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="row px-0 mx-0" style="height: 90%">
+    <div class="col-2  px-0 ">
+      <div class="list-group border border-primary rounded h-100">
+        <a [routerLink]="" class="list-group-item list-group-item-action active">Home</a>
+        <a routerLink="/customer" class="list-group-item list-group-item-action">Quản Lý Khách hàng</a>
+      </div>
+    </div>
+    <div class="col-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

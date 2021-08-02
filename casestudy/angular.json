@@ -5,11 +5,7 @@
   "projects": {
     "casestudy": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -28,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -92,7 +89,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -127,6 +125,6 @@
   },
   "defaultProject": "casestudy",
   "cli": {
-    "analytics": "46ee6500-2678-4a99-86ad-0e8a5d961395"
+    "analytics": "a734cab5-004d-4a92-80ca-77f8ce8f622a"
   }
 }

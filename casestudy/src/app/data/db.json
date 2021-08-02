@@ -1,0 +1,86 @@
+{
+  "customer": [
+    {
+      "customerName": "Hoàng Phạm Vân",
+      "customerCode": "KH-1234",
+      "customerType": {
+        "id": {
+          "id": 1,
+          "customerTypeName": "diamond"
+        }
+      },
+      "customerDayOfBirth": "2002-01-30",
+      "customerIdCard": "123456789",
+      "customerPhone": "0359756804",
+      "customerEmail": "hpdong@gmail.com",
+      "customerAddress": "DakLak",
+      "id": 1
+    },
+    {
+      "id": 3,
+      "customerType": {
+        "id": 1,
+        "customerTypeName": "diamond"
+      },
+      "customerCode": "KH-1234",
+      "customerName": "Thu Huyền",
+      "customerDayOfBirth": "30-01-2002",
+      "customerIdCard": "123456789",
+      "customerPhone": "0359756804",
+      "customerEmail": "hpdong@gmail.com",
+      "customerAddress": "DakLak"
+    },
+    {
+      "customerName": "Nana",
+      "customerCode": "KH-789",
+      "customerType": {
+        "id": "2"
+      },
+      "customerDayOfBirth": "2021-08-31",
+      "customerIdCard": "123456789",
+      "customerPhone": "0914897843",
+      "customerEmail": "na@gmal.com",
+      "customerAddress": "Đà nẵng",
+      "id": 4
+    },
+    {
+      "customerName": "Khakh",
+      "customerCode": "KH-7878",
+      "customerType": {
+        "id": "3"
+      },
+      "customerDayOfBirth": "2021-08-03",
+      "customerIdCard": "123456788",
+      "customerPhone": "0914897843",
+      "customerEmail": "hpdong@gmail.com",
+      "customerAddress": "Đà Nẵng",
+      "id": 5
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "customerTypeName": "Diamond"
+    },
+    {
+      "id": 2,
+      "customerTypeName": "Platinium"
+    },
+    {
+      "id": 3,
+      "customerTypeName": "Gold"
+    },
+    {
+      "id": 4,
+      "customerTypeName": "Gold"
+    },
+    {
+      "id": 5,
+      "customerTypeName": "silver"
+    },
+    {
+      "id": 6,
+      "customerTypeName": "Member"
+    }
+  ]
+}
